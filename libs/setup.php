@@ -17,4 +17,5 @@ $config->set('dbhost', getenv('MYSQLHOST') ?: 'localhost');
 $config->set('dbname', getenv('MYSQLDATABASE') ?: 'dwesmvc');
 $config->set('dbuser', getenv('MYSQLUSER') ?: 'root');
 $config->set('dbpass', getenv('MYSQLPASSWORD') ?: '');
+//mysql://root:hslbrvGSpuXJYCtGuOItYZcOiqBTyEwH@trolley.proxy.rlwy.net:36874/railway
 ?>
