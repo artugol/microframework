@@ -1,0 +1,23 @@
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# PHP
+composer.lock
+vendor/
+.env
+.env.local
+
+# Temporal
+node_modules/
+dist/
+build/
