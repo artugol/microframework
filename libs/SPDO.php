@@ -12,8 +12,9 @@ class SPDO extends PDO
     public function __construct()
     {
         $config = Config::singleton();
+        $port = getenv('MYSQLPORT') ?: '3306';
         parent::__construct(
-            'mysql:host=' . $config->get('dbhost') . ';dbname=' . $config->get('dbname'),
+            'mysql:host=' . $config->get('dbhost') . ';port=' . $port . ';dbname=' . $config->get('dbname'),
             $config->get('dbuser'), $config->get('dbpass')
         );
     }

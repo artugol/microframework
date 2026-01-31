@@ -12,8 +12,9 @@ $config->set('modelsFolder', 'models/');
 $config->set('viewsFolder', 'views/');
 
 // Parámetros de conexión a la BD
-$config->set('dbhost', 'localhost');
-$config->set('dbname', 'dwesmvc');
-$config->set('dbuser', 'root');
-$config->set('dbpass', '');
+// Lee las variables de entorno de Railway si están disponibles, sino usa valores por defecto
+$config->set('dbhost', getenv('MYSQLHOST') ?: 'localhost');
+$config->set('dbname', getenv('MYSQLDATABASE') ?: 'dwesmvc');
+$config->set('dbuser', getenv('MYSQLUSER') ?: 'root');
+$config->set('dbpass', getenv('MYSQLPASSWORD') ?: '');
 ?>
